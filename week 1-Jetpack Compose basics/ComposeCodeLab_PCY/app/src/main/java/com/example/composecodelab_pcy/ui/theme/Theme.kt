@@ -5,6 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -27,6 +28,13 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val LightColorPalette2 = lightColors(
+    surface = Blue,
+    onSurface = Color.White,
+    primary = LightBlue,
+    onPrimary = Navy
+)
+
 @Composable
 fun ComposeCodeLab_PCYTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -35,7 +43,7 @@ fun ComposeCodeLab_PCYTheme(
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
-        LightColorPalette
+        LightColorPalette2
     }
 
     MaterialTheme(
